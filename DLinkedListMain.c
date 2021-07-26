@@ -1,5 +1,12 @@
 #include <stdio.h>
 #include "DLinkedList.h"
+int WhoIsPrecede(int d1, int d2)
+{
+    if(d1 < d2)
+        return 0;    // d1이 정렬 순서상 앞선다.
+    else
+        return 1;    // d2가 정렬 순서상 앞서거나 같다.
+}
 
 int main()
 {
@@ -19,9 +26,11 @@ int main()
     if(LFirst(&list, &data))
     {
         printf("%d ", data);
+        
         while (LNext(&list, &data))
             printf("%d ", data);
     }
+    
     printf("\n\n");
     
     // 숫자 22을 검색하여 모두 삭제 ///////
@@ -38,7 +47,8 @@ int main()
     // 삭제 후 남아있는 데이터 전체 출력 ///////
     printf("현재 데이터의 수 : %d \n", LCount(&list));
     
-    if (LFirst(&list, &data)) {
+    if (LFirst(&list, &data))
+    {
         printf("%d ", data);
         
         while (LNext(&list, &data))
