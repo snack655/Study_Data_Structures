@@ -1,0 +1,10 @@
+# name = input('이름을 입력하세요')
+# print("My name is "+name)
+
+a = int(input('a='))
+b = int(input('b='))
+print(a+b)
+print(a*b)
+print(a-b)
+print(a/b)
+#a = int(input('a='))
